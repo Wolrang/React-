@@ -5,6 +5,7 @@ import Login from './page/Login'
 import ProductAll from './page/ProductAll'
 import ProductDetail from './page/ProductDetail'
 import Nav from './component/Nav'
+import ProductCard from './component/ProductCard'
 
 // 1. 전체상품(ProductAll), 로그인(Login), 상세페이지(ProductDetail)
 // 2. 로그인 전에 상세페이지 접속 시, 로그인 페이지를 먼저 보여준다.

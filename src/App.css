@@ -88,6 +88,10 @@ li {
   opacity: 0.5;
 }
 
+.search input::placeholder {
+  font-weight:bold
+}
+
 .search input:hover {
   opacity: 1;
 }
@@ -107,4 +111,29 @@ li {
 .heart:hover,
 .shopping:hover {
   opacity: 0.4;
+}
+
+.img-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.img {
+  width: 400px;
+  height: 600px;
+  text-align: center;
+  padding: 40px;
+}
+
+.img img {
+  width: 400px;
+  height: 400px;
+  padding: 10px;
+}
+
+.img div {
+  text-align: start;
+  padding: 10px;
 }
