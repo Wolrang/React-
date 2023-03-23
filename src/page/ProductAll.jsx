@@ -1,6 +1,7 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import ProductCard from '../component/ProductCard'
+import { Container, Row, Col } from 'react-bootstrap';
 
 const ProductAll = () => {
   const [productList, setProductList] = useState([]);
@@ -24,7 +25,7 @@ const ProductAll = () => {
    
   const getProducts = async () => {
     // 모든 데이터를 가진 주소를 부른다.
-    let url = " http://localhost:5000/produts"
+    let url = " http://localhost:5000/products"
     // url을 fetch 해줘라
     let response = await fetch(url)
     // response에서 json을 뽑아와라
@@ -40,9 +41,19 @@ const ProductAll = () => {
   }, [])
 
   return (
-    <div>
-      <ProductCard></ProductCard>
-    </div>
+    <Container>
+      <Row>
+      {
+        productList.map((menu, i) => {
+          return (
+            <Col lg={4}>
+             <ProductCard menu={menu} key={i}></ProductCard>
+            </Col>
+          )
+        })
+      }
+      </Row>
+    </Container>
   )
 }
 
