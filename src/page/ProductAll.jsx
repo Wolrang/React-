@@ -46,8 +46,8 @@ const ProductAll = () => {
       {
         productList.map((menu, i) => {
           return (
-            <Col lg={4}>
-             <ProductCard menu={menu} key={i}></ProductCard>
+            <Col lg={4} key={i}>
+             <ProductCard menu={menu}></ProductCard>
             </Col>
           )
         })
